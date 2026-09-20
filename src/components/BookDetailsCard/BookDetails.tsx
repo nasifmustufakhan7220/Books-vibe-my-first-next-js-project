@@ -1,6 +1,7 @@
 import IBookType from "@/types/book.type";
 import {BookOpen, ChevronRight, Heart, Star } from "lucide-react";
 import Image from "next/image";
+import ReadBook from "../BookDetailsBtn/ReadBook";
 
 interface IBookDetailsProps{
     book: IBookType;
@@ -109,19 +110,7 @@ const BookDetails = ({ book }:IBookDetailsProps) => {
 
           {/* Actions */}
           <div className="flex flex-col gap-3 sm:flex-row">
-            <button className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#172B2A] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#274541] dark:bg-emerald-700 dark:hover:bg-emerald-600">
-              <BookOpen size={17} />
-              Read Book
-              <ChevronRight size={16} />
-            </button>
-
-            <button
-              aria-label="Bookmark book"
-              className="flex  items-center justify-center gap-2 rounded-xl border  px-5 py-3 text-sm font-semibold transition  dark:bg-slate-900 dark:text-slate-200"
-            >
-              <Heart size={17} />
-              Save
-            </button>
+            <ReadBook book={book}/>
           </div>
         </div>
       </div>
