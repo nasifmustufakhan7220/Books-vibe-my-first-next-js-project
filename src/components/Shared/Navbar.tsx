@@ -46,7 +46,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-1 shadow"
             >{links}</ul>
           </div>
-          <div className="btn btn-ghost text-xl">
+          <div className="text-xl">
             <Image src={logo} alt="book logo"></Image>
           </div>
         </div>
