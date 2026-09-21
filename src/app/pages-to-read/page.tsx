@@ -66,7 +66,7 @@ const PagesToReadRechartPage = () => {
 
   return (
     <div className="max-w-5xl mx-auto bg-[#f8f7f7] my-5 rounded-2xl py-8">
-      <div className="flex justify-center">
+      {readBooks.length > 0 ?<div className="flex justify-center">
         <BarChart
           style={{
             width: "100%",
@@ -92,7 +92,7 @@ const PagesToReadRechartPage = () => {
           </Bar>
           {/* <RechartsDevtools /> */}
         </BarChart>
-      </div>
+      </div> : <p className="text-center text-2xl font-bold">No content found yet</p>}
     </div>
   );
 };
