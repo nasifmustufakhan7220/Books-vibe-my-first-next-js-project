@@ -13,9 +13,9 @@ const Navbar = () => {
         <li>
           <Link className={`${pathname === '/' ? "text-success font-bold border border-success" : ""}`} href={'/'}>Home</Link>
         </li>
-        <li>
-          <a>Item 3</a>
+        <li><Link className={`${pathname === '/listed-books'? "text-success font-bold border border-success" : ""}`} href={'/listed-books'}>Listed Books</Link>
         </li>
+        
       </>
     );
   return (

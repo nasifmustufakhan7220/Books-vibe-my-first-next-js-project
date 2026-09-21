@@ -14,7 +14,7 @@ const ReadBook = ({book}:{book:IBookType}) => {
 
     return (
         <div>
-            <button onClick={handelReadBook} className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#172B2A] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#274541] dark:bg-emerald-700 dark:hover:bg-emerald-600">
+            <button onClick={handelReadBook} className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#172B2A] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#274541] dark:bg-emerald-700 cursor-pointer dark:hover:bg-emerald-600">
               <BookOpen size={17} />
               Read Book
               <ChevronRight size={16} />

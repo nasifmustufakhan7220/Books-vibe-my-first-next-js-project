@@ -1,7 +1,8 @@
 import IBookType from "@/types/book.type";
-import {BookOpen, ChevronRight, Heart, Star } from "lucide-react";
+import {  Star } from "lucide-react";
 import Image from "next/image";
 import ReadBook from "../BookDetailsBtn/ReadBook";
+import WishlistBooks from "../BookDetailsBtn/WishlistBooks";
 
 interface IBookDetailsProps{
     book: IBookType;
@@ -9,7 +10,7 @@ interface IBookDetailsProps{
 
 const BookDetails = ({ book }:IBookDetailsProps) => {
   return (
-    <section className="mx-auto w-full max-w-6xl overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl bg-white">
+    <section className="mx-auto w-full max-w-6xl overflow-hidden rounded-3xl border border-slate-200 shadow-xl bg-white">
       <div className="grid grid-cols-1 md:grid-cols-[280px_1fr]">
         {/* Book Cover */}
         <div className="relative flex min-h-95 items-center justify-center overflow-hidden bg-[#f9f9f9] p-8">
@@ -111,6 +112,7 @@ const BookDetails = ({ book }:IBookDetailsProps) => {
           {/* Actions */}
           <div className="flex flex-col gap-3 sm:flex-row">
             <ReadBook book={book}/>
+            <WishlistBooks book={book} />
           </div>
         </div>
       </div>
