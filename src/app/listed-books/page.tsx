@@ -50,8 +50,8 @@ const ListedBooksPage = () => {
         />
         <div className="tab-content bg-base-100 border-base-300 p-6">
           {sortedReadBooks.length > 0 ? (
-            sortedReadBooks.map((read) => (
-              <ReadOrWish key={read.bookId} read={read} />
+            sortedReadBooks.map((read, index) => (
+              <ReadOrWish key={read.bookId + index} read={read} />
             ))
           ) : (
             <p className="bg-[#F3F3F3] p-3 mt-7 flex justify-center text-2xl font-bold max-w-6xl mx-auto rounded-4xl">
@@ -68,8 +68,8 @@ const ListedBooksPage = () => {
         />
         <div className="tab-content bg-base-100 border-base-300 p-6">
           {sortedWishList.length > 0 ? (
-            sortedWishList.map((read) => (
-              <ReadOrWish key={read.bookId} read={read} />
+            sortedWishList.map((read, index) => (
+              <ReadOrWish key={read.bookId + index} read={read} />
             ))
           ) : (
             <p className="bg-[#F3F3F3] p-3 mt-7 flex justify-center text-2xl font-bold max-w-6xl mx-auto rounded-4xl">

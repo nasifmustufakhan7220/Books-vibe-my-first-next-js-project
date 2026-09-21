@@ -1,6 +1,7 @@
 import IBookType from "@/types/book.type";
 import { BookOpen, CalendarDays, FileText, Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const ReadOrWish = ({read}:{read:IBookType}) => {
@@ -109,12 +110,16 @@ const ReadOrWish = ({read}:{read:IBookType}) => {
                 Read Book
               </button>
 
+              <Link href={`/books/${read.bookId}`}>
+              
               <button
                 type="button"
                 className="flex-1 rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600 active:scale-[0.98] dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
               >
                 View Details
               </button>
+              
+              </Link>
             </div>
           </div>
         </div>
