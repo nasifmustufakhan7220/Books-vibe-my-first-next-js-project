@@ -3,6 +3,7 @@ import { BooksContest } from "@/context/BookContext";
 import IBookType from "@/types/book.type";
 import { BookOpen, ChevronRight } from "lucide-react";
 import { useContext } from "react";
+import { toast } from "react-toastify";
 
 
 const WishlistBooks = ({book}:{book: IBookType}) => {
@@ -10,6 +11,7 @@ const WishlistBooks = ({book}:{book: IBookType}) => {
     const {whishlist, setWishList} = useContext(BooksContest);
     const handelWishListBook = ()=>{
         setWishList([...whishlist, book]);
+        toast.success(`${book.bookName} added to the Wishlist books`)
     }
 
 
